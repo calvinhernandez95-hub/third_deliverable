@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Banner */
+.banner {
+  background: url('images/banner.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+}
+
+.image-section, .text-section {
+  flex: 1 1 400px;
+  margin: 10px;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Offerings Cards */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Peer Support & Contact Us */
+.peer-support, .contact-us {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.peer-container, .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 🔹 Smaller image size for Peer and Contact */
+.peer-container img, .contact-container img {
+  width: 180px;       /* Smaller width */
+  height: auto;
+  border-radius: 10px;
+  margin: 15px;
+  object-fit: cover;
+}
+
+.peer-text, .contact-text {
+  max-width: 500px;
+  margin: 10px;
+  text-align: left;
+}
+
+.peer-text ul {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.peer-text ul li::before {
+  content: "✔️ ";
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+
+
+
+
+.services-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.services-categories {
+  counter-reset: section;
+  list-style: none;
+  padding-left: 0;
+}
+
+.services-categories > li {
+  margin: 30px 0;
+  counter-increment: section;
+  font-size: 1.2em;
+}
+
+.services-categories > li::before {
+  content: counter(section) ".";
+  color: #2e8b57;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  .peer-container, .contact-container {
+    flex-direction: column;
+  }
+  .peer-text, .contact-text {
+    text-align: center;
+  }
+  .peer-container img, .contact-container img {
+    width: 150px; /* even smaller on mobile */
+  }
+}
+
+
+
+.contact-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contact-form-section form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.contact-form-section label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form-section input,
+.contact-form-section select,
+.contact-form-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus,
+.contact-form-section select:focus {
+  outline: none;
+  border-color: #2e8b57;
+  box-shadow: 0 0 5px rgba(46,139,87,0.3);
+}
+
+.contact-form-section button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form-section button:hover {
+  background: #236040;
+}
+
+.contact-info {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-categories > li {
+    font-size: 1.1em;
+  }
+  .contact-form-section form {
+    padding: 20px;
+  }
+}

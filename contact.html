@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Wellness Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="banner">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="offerings.html">Resources</a></li>
+      <li><a href="peer.html">Peer Support</a></li>
+      <li><a href="services.html">Support Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="contact-page">
+    <section class="contact-form-section">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="POST" novalidate>
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required minlength="2">
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+
+        <label for="subject">Subject *</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Select a topic</option>
+          <option value="general">General Inquiry</option>
+          <option value="peer">Peer Support</option>
+          <option value="services">Support Services</option>
+          <option value="booking">Booking a Session</option>
+        </select>
+
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="6" required minlength="10" placeholder="How can we help you today?"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Other Ways to Reach Us</h3>
+        <p><strong>Email:</strong> hernandez.calv@northeastern.edu</p>
+        <p><strong>Phone:</strong> (617) 461-3880</p>
+        <p><strong>Location:</strong> Boston, MA</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Calvin's Wellness Hub</p>
+  </footer>
+</body>
+</html>
